@@ -7,8 +7,14 @@ services:
       - "5432:5432"
     volumes:
       - ./db:/var/lib/postgresql/data
+      - ./data:/docker-entrypoint-initdb.d
     environment:
       POSTGRES_PASSWORD: example
+    healthcheck:
+        test: pg_isready -U postgres -d postgres
+        interval: 10s
+        timeout: 10s
+        retries: 5
   web-app:
     container_name: web-app-container
     build: .
@@ -16,3 +22,6 @@ services:
       - "8080:8080"
     links:
       - "db:database"
+    depends_on:
+      db:
+        condition: service_healthy
