@@ -1,8 +1,8 @@
 # crud_app
-A (very) basic CRUD application using java, maven, spring boot, and docker.
+This is the beginnings of a search engine/web crawler (also a (very) basic CRUD application) using java, maven, spring boot, and docker.
 
 ## Overview
-A small project to get some exposure to Docker, Spring+Maven, and working RESTfully. Currently there is no 'front end' to this application, so if you wish to interact with the db, you'll need to send your own PUT/GET/POST/DELETE requests (I recommend an application like Postman)
+A small project to get some exposure to Docker, Spring+Maven, and working RESTfully. Starting the docker containers will spin up a website on localhost:8080 where the user can input some text. The text is merely echoed back in another page, but next step is to get the application actually crawlin'!
 
 ## Running in Docker
 Simply "docker compose up" in this folder. This will pull the postgres image, and build the web application image, and start both containers.

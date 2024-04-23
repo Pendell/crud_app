@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Just Search</title>
+        <style>
+            h2 {text-align: center;}
+            label {text-align: center;}
+            form {text-align: center;}
+        </style>
+    </head>
+        <body>
+
+            <h2>Welcome to my web crawler</h2>
+            <form action="/search" method="post">
+                <label for="search_bar">What do you wanna look for?</label><br>
+                <input type="text" id="search_string" name="search_string" onkeypress="print(event)"><br>
+            </form>
+            <script>
+                function print(event) {
+                    if (event.key == "Enter") {
+                        alert("Got search request for: " + document.getElementById('search_string').value);
+                        fetch("http://localhost:8080/search?search_string="+document.getElementById('search_string').value);
+                    }
+                }
+            </script>
+        
+        </body>
+</html>
