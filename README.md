@@ -1,6 +1,8 @@
 # crud_app
 This is the beginnings of a search engine/web crawler (also a (very) basic CRUD application) using java, maven, spring boot, and docker.
 
+Currently, the application will prompt the user for a stock symbol and try to grab the most recent price from google finance's website. In future updates, I would like to put the results into the db to minimize hits to the google finance website (please don't block me).
+
 ## Overview
 A small project to get some exposure to Docker, Spring+Maven, and working RESTfully. Starting the docker containers will spin up a website on localhost:8080 where the user can input some text. The text is merely echoed back in another page, but next step is to get the application actually crawlin'!
 
