@@ -15,8 +15,7 @@ The web-app-container will begin booting once the postgres-container passes it's
 
 ## Interaction
 Navigate to localhost:8080 to visit the home index.
-
-There's no 'front-end' quite yet, so to interact with the db you'll have to generate your own requests.
+Here you can input a stock symbol and select from the available markets to query the last known price (as per google finance).
 
 ### C is for creating
 The DB only has one table, 'users'. To add a user, send a POST request to "localhost:8080/create" with {"name": "user1"} as the body of the json request. The json given here will add a user with the name "user1" to database. If this is the first entry, the 'id' field will be 1.
