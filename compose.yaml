@@ -15,7 +15,7 @@ services:
         interval: 3s
         timeout: 10s
         retries: 5
-  web-app:
+  app:
     container_name: web-app-container
     build: .
     ports:

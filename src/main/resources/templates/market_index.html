@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Just Search</title>
+        <style>
+            h2 {text-align: center;}
+            label {text-align: center;}
+            form {text-align: center;}
+        </style>
+    </head>
+        <body>
+
+            <h2>Welcome to my price lookup</h2>
+
+            <form action="/market_lookup" method="get">
+                <label for="search_symbol">What price would you like to see?</label><br>
+                <input type="text" id="search_symbol" name="search_symbol" onkeypress="print(event)">
+                <select name="market_index" id="market_index">
+                    <option value="NYSE">NYSE</option>
+                    <option value="NASDAQ">NASDAQ</option>
+                </select><br>
+            </form>
+
+            <script>
+                function print(event) {
+                    /*
+                    if (event.key == "Enter") {
+                        var sym = document.getElementById('search_symbol');
+                        var mkt = document.getElementById('market_index');
+                        //fetch("http://localhost:8080/market_lookup?search_symbol="+sym.value+"&market_index="+mkt.value);
+                    }
+                    */
+                }
+            </script>
+        
+        </body>
+</html>
