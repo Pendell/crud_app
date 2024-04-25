@@ -42,7 +42,7 @@ public class ApiControllers {
         return "market_index";
     }
 
-    /** userSearch(String search_string)
+    /** getPrice grabs the price of the request symbol on a given market
      * @param symbol the symbol to search for 
      * @param index the market where the symbol exists
      * @return the last price of the symbol (per https://www.google.com/finance/quote/${symbol}:${index})
